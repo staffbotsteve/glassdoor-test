@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    </head>
+    <style>
+        img.sizer {
+        height: 25%;
+        width: 25%;
+        }
+    </style>
+        <body>
+
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+            <img src="totalmed.svg" width="30%" height="30%" class="d-inline-block align-top sizer" alt="">
+            </a>
+        </nav>
+        <div class="container">
+            <div class='row'>
+                <div class='col-3'>
+                </div>
+                <div class='col-6'>
+
+                    <div class="row">
+                    </div>   
+                    <div class="row">
+                        <form>
+                            <div class="form-group">
+                                <h3><b>How was your experience with TotalMed?</b></h3>
+                                <label for="formControlRange" style="width:100%; text-align: center;">1 to 10</label>
+                                <input type="range" min="1" max="10" value="10" class="form-control-range" id="formControlRange" style="width:100%; text-align: center;">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="submit">Submit</button>
+                            </div>
+                          </form>
+
+                    </div>
+                </div>
+                <div class='col-3'>
+                </div>
+            </div>
+
+        </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>    
+    <script>
+        document.getElementById("submit").addEventListener("click", function(){
+        var rating = document.getElementById("formControlRange").value;
+        console.log('rating', rating)
+        if (rating>7) {
+            if (confirm("Thank you.  Can you help spread the word by rating us n GlassDoor?")) {
+                window.open("https://www.glassdoor.com/mz-survey/employer/collectReview_input.htm?i=849881&j=true&y=&c=PAGE_INFOSITE_TOP");
+            }
+        }
+        });    
+    </script>
+</body>
+</html>
